@@ -14,13 +14,13 @@
     rel="stylesheet">
     <link rel="stylesheet" href="./CSS/inicio.css">
     <link rel="stylesheet" href="./aos/aos.css">
+    <link rel="stylesheet" href="./CSS/usuario.css">
 </head>
-<body>  
-    <header>
-        <img src="./IMG/fondoventanausuarios2.webp" class="card-img-top" alt="...">
+<body class="fondo py-5">  
+    <header class="cabeza py-5">
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="./index.html"><img class="logo" src="./IMG/LogoPagina.png" alt="..."></a>
+                <a class="navbar-brand" href="./index.html"><img class="logo" src="./IMG/LogoPaginaNuevo.webp" alt="..."></a>
                 <h4 class="NombrePagina">AdrianTorres</h4>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -61,7 +61,142 @@
             </div>
         </nav>
     </header>
-    <main>
+    <section class="user py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Correo Electronico</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+                        </div>
+                        <div class="mb-3 recuperar">
+                            <!-- Button trigger modal -->
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#usuario">¿Olvidaste tu
+                                contraseña?</a>
+                            <!-- Modal -->
+                            <div class="modal fade" id="usuario" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Recuperar Contraseña
+                                            </h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Ingresa tu correo electrónico o numero telefonico para recibir un
+                                                código de recuperación.</p>
+                                            <div class="container">
+                                                <div class="dropdown">
+                                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Seleccionar
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" href="#">Correo Electronico</a>
+                                                        </li>
+                                                        <li><a class="dropdown-item" href="#">Telefono</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <form action="">
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Correo</label>
+                                                    <input type="email" class="form-control"
+                                                        id="exampleInputEmail1">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary">Mandar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
+                    </form>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <p class="texto">¿NO TIENES CUENTA?</p>
+
+                    
+        <!-- Button trigger modal -->
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#new_usuario" class="btn btn-dark">Crear Cuenta</button>
+                        <p class="texto">REGÍSTRATE AQUI</p>
+                    
+                    <!--crear cuenta-->
+                    <div class="mb-3 recuperar">
+                        <!-- Modal -->
+                        <div class="modal fade" id="new_usuario" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Registro
+                                        </h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Ingresa tu correo electrónico o numero telefonico para recibir un
+                                            código de recuperación.</p>
+                                        <div class="container">
+                                        </div>
+                                        <form action="">
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1" name="nombre" class="form-label">Nombre</label>
+                                                <input type="text" class="form-control"
+                                                    id="exampleInputEmail1">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1" name="telefono" class="form-label">Telefono</label>
+                                                <input type="text number" class="form-control"
+                                                    id="exampleInputEmail1">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1" name="email" class="form-label">Email</label>
+                                                <input type="email" class="form-control"
+                                                    id="exampleInputEmail1">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1"  name="contraseña" class="form-label">Contraseña</label>
+                                                <input type="text" class="form-control"
+                                                    id="exampleInputEmail1">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1"  name="confirmar_contraseña" class="form-label">Confirmar Contraseña</label>
+                                                <input type="text" class="form-control"
+                                                    id="exampleInputEmail1">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-success">Guardar</button>
+                                        <button type="button" class="btn btn-danger">Cencelar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
             <br>
                 <script src="./aos/aos.js"></script>
                 <script src="./JS/script.js"></script>
